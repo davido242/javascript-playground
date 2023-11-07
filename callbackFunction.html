@@ -9,17 +9,17 @@
 <body>
   <h2>Hi Dave, I'm using your machine to run this javascript web page using V8 engine.</h2>
   <script>
-      function doSomething(callBack) {
+    function afterOperation() {
+        console.log("After Operation is complete.");
+      }
+
+      async function doSomething(callBack) {
         console.log("Doing Something.....");
         // simulate a time-consuming operation
-        setTimeout(() => {
+        await setTimeout(() => {
           console.log("Operation Complete");
           callBack();
         }, 10000);
-      }
-
-      function afterOperation() {
-        console.log("After Operation is complete.");
       }
       doSomething(afterOperation);
   </script>

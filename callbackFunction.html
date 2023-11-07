@@ -11,12 +11,11 @@
   <script>
       function doSomething(callBack) {
         console.log("Doing Something.....");
-
         // simulate a time-consuming operation
-        setTimeout(() => {
+        setTimeout(function() {
           console.log("Operation Complete");
           callBack();
-        }, 2000);
+        }, 10000);
       }
 
       function afterOperation() {

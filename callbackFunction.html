@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Testing Javascript</title>
+</head>
+<body>
+  <h2>Hi Dave, I'm using your machine to run this javascript web page using V8 engine.</h2>
+  <script>
+      function doSomething(callBack) {
+        console.log("Doing Something.....");
+
+        // simulate a time-consuming operation
+        setTimeout(() => {
+          console.log("Operation Complete");
+          callBack();
+        }, 2000);
+      }
+
+      function afterOperation() {
+        console.log("After Operation is complete.");
+      }
+      doSomething(afterOperation);
+  </script>
+</body>
+</html>

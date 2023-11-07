@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Testing Javascript</title>
+</head>
+<body>
+  <h2>Hi Dave, I'm using your machine to run this javascript web page.</h2>
+  <script>
+  function shoutArray(arrayerer, one, two){
+    return arrayerer + 2 + one + two;
+  }
+
+  console.log(shoutArray(2, 3, 4,))
+
+  // Storing an object in localStorage
+const user = { name: 'John', age: 30 };
+localStorage.setItem('userData', JSON.stringify(user));
+
+// Retrieving and parsing the object from localStorage
+const storedUserData = localStorage.getItem('userData');
+const parsedUserData = JSON.parse(storedUserData);
+
+console.log('User data from localStorage:', parsedUserData);
+  </script>
+</body>
+</html>

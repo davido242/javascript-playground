@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
   <title>Testing Javascript</title>
 </head>
 <body>
@@ -14,19 +13,21 @@
       return new Promise((resolve, reject) => {
         setTimeout(() => {
           resolve("Data has been Fetched.");
-        }, 2000)
+        }, 3000)
       })
     }
 
     async function processAsyncData() {
+      console.log("Fetching Data....");
       try {
-        console.log("Fetching Data....");
+        
         const result = await fetchData();
         console.log(result);
-        console.log("Data Processing Completed....");
+        
       } catch (error) {
         console.log("🚀 ~ file: asyncAwaitPromise.html:24 ~ processAsyncData ~ error:", error)        
       }
+      console.log("Data Processing Completed....");
     }
 
     processAsyncData();

@@ -16,14 +16,14 @@
   console.log(shoutArray(2, 3, 4,))
 
   // Storing an object in localStorage
-const user = { name: 'John', age: 30 };
+const user = { name: 'Daveedo', age: "30" };
 localStorage.setItem('userData', JSON.stringify(user));
 
 // Retrieving and parsing the object from localStorage
-const storedUserData = localStorage.getItem('userData');
-const parsedUserData = JSON.parse(storedUserData);
+const storedUserData = JSON.parse(localStorage.getItem('userData'));
+// const parsedUserData = JSON.parse(storedUserData);
 
-console.log('User data from localStorage:', parsedUserData);
+console.log('User data from localStorage:', storedUserData);
   </script>
 </body>
 </html>
